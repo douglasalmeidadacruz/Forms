@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inscrição - Curso de Programação</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f5f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #2563eb;
+            font-size: 32px;
+        }
+
+        .descricao {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        fieldset {
+            border: 1px solid #d9e1ec;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 22px;
+            background: #fafcff;
+        }
+
+        legend {
+            padding: 8px 15px;
+            border-radius: 7px;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #374151;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-size: 15px;
+            background: white;
+            transition: 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #9ca3af;
+        }
+
+        p {
+            font-weight: bold;
+            color: #374151;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 7px;
+            accent-color: #2563eb;
+        }
+
+        input[type="radio"] + label,
+        input[type="checkbox"] + label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        button {
+            border: none;
+            padding: 13px 25px;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button[type="submit"] {
+            background: #2563eb;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        button[type="reset"] {
+            background: #e5e7eb;
+            color: #374151;
+            margin-left: 10px;
+        }
+
+        button[type="reset"]:hover {
+            background: #d1d5db;
+        }
+
+        .botoes {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            fieldset {
+                padding: 18px;
+            }
+
+            button {
+                width: 100%;
+                margin: 5px 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Inscrição para Curso de Programação</h1>
+
+        <p class="descricao">
+            Preencha o formulário abaixo para realizar sua inscrição.
+        </p>
+
+        <form action="#" method="post">
+
+            <!-- DADOS PESSOAIS -->
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <label for="nome">Nome:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                    minlength="2"
+                >
+
+                <br><br>
+
+                <label for="sobrenome">Sobrenome:</label>
+                <input
+                    type="text"
+                    id="sobrenome"
+                    name="sobrenome"
+                    placeholder="Digite seu sobrenome"
+                    required
+                    minlength="2"
+                >
+
+                <br><br>
+
+                <label for="email">E-mail:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="exemplo@email.com"
+                    required
+                >
+
+                <br><br>
+
+                <label for="senha">Senha:</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                    minlength="8"
+                >
+
+                <br><br>
+
+                <label for="telefone">Telefone:</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(16) 99999-9999"
+                    required
+                >
+
+                <br><br>
+
+                <label for="idade">Idade:</label>
+                <input
+                    type="number"
+                    id="idade"
+                    name="idade"
+                    min="14"
+                    max="100"
+                    placeholder="Digite sua idade"
+                    required
+                >
+
+                <br><br>
+
+                <label for="nascimento">Data de nascimento:</label>
+                <input
+                    type="date"
+                    id="nascimento"
+                    name="nascimento"
+                    required
+                >
+
+            </fieldset>
+
+            <!-- INFORMAÇÕES DO CURSO -->
+            <fieldset>
+                <legend>Informações do curso</legend>
+
+                <p>Escolha um curso:</p>
+
+                <input
+                    type="radio"
+                    id="htmlcss"
+                    name="curso"
+                    value="HTML e CSS"
+                    required
+                >
+                <label for="htmlcss">HTML e CSS</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="javascript"
+                    name="curso"
+                    value="JavaScript"
+                >
+                <label for="javascript">JavaScript</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="python"
+                    name="curso"
+                    value="Python"
+                >
+                <label for="python">Python</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="java"
+                    name="curso"
+                    value="Java"
+                >
+                <label for="java">Java</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="bancodados"
+                    name="curso"
+                    value="Banco de Dados"
+                >
+                <label for="bancodados">Banco de Dados</label>
+
+                <br><br>
+
+                <label for="nivel">Nível de conhecimento:</label>
+
+                <select
+                    id="nivel"
+                    name="nivel"
+                    required
+                >
+                    <option value="">Selecione seu nível</option>
+                    <option value="iniciante">Iniciante</option>
+                    <option value="intermediario">Intermediário</option>
+                    <option value="avancado">Avançado</option>
+                </select>
+
+            </fieldset>
+
+            <!-- MODALIDADE E TURNO -->
+            <fieldset>
+                <legend>Modalidade e turno</legend>
+
+                <p>Escolha a modalidade:</p>
+
+                <input
+                    type="radio"
+                    id="presencial"
+                    name="modalidade"
+                    value="Presencial"
+                    required
+                >
+                <label for="presencial">Presencial</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="online"
+                    name="modalidade"
+                    value="Online"
+                >
+                <label for="online">Online</label>
+
+                <br><br>
+
+                <p>Escolha o turno:</p>
+
+                <input
+                    type="radio"
+                    id="manha"
+                    name="turno"
+                    value="Manhã"
+                    required
+                >
+                <label for="manha">Manhã</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="tarde"
+                    name="turno"
+                    value="Tarde"
+                >
+                <label for="tarde">Tarde</label>
+
+                <br>
+
+                <input
+                    type="radio"
+                    id="noite"
+                    name="turno"
+                    value="Noite"
+                >
+                <label for="noite">Noite</label>
+
+            </fieldset>
+
+            <!-- CONHECIMENTOS -->
+            <fieldset>
+                <legend>Conhecimentos</legend>
+
+                <p>Quais tecnologias você já conhece?</p>
+
+                <input
+                    type="checkbox"
+                    id="tec_html"
+                    name="tecnologias"
+                    value="HTML"
+                >
+                <label for="tec_html">HTML</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="tec_css"
+                    name="tecnologias"
+                    value="CSS"
+                >
+                <label for="tec_css">CSS</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="tec_javascript"
+                    name="tecnologias"
+                    value="JavaScript"
+                >
+                <label for="tec_javascript">JavaScript</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="tec_python"
+                    name="tecnologias"
+                    value="Python"
+                >
+                <label for="tec_python">Python</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="tec_java"
+                    name="tecnologias"
+                    value="Java"
+                >
+                <label for="tec_java">Java</label>
+
+                <br>
+
+                <input
+                    type="checkbox"
+                    id="tec_csharp"
+                    name="tecnologias"
+                    value="C#"
+                >
+                <label for="tec_csharp">C#</label>
+
+            </fieldset>
+
+            <!-- LOCALIZAÇÃO -->
+            <fieldset>
+                <legend>Localização</legend>
+
+                <label for="estado">Estado:</label>
+
+                <select
+                    id="estado"
+                    name="estado"
+                    required
+                >
+                    <option value="">Selecione seu estado</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="PR">Paraná</option>
+                    <option value="BA">Bahia</option>
+                    <option value="GO">Goiás</option>
+                </select>
+
+                <br><br>
+
+                <label for="cidade">Cidade:</label>
+                <input
+                    type="text"
+                    id="cidade"
+                    name="cidade"
+                    placeholder="Digite sua cidade"
+                    required
+                    minlength="2"
+                >
+
+            </fieldset>
+
+            <!-- INFORMAÇÕES ADICIONAIS -->
+            <fieldset>
+                <legend>Informações adicionais</legend>
+
+                <label for="motivo">
+                    Por que você deseja fazer este curso?
+                </label>
+
+                <br><br>
+
+                <textarea
+                    id="motivo"
+                    name="motivo"
+                    rows="6"
+                    cols="50"
+                    placeholder="Conte por que você deseja fazer este curso..."
+                    minlength="20"
+                    required
+                ></textarea>
+
+                <br><br>
+
+                <input
+                    type="checkbox"
+                    id="termos"
+                    name="termos"
+                    value="aceito"
+                    required
+                >
+
+                <label for="termos">
+                    Aceito os termos de inscrição
+                </label>
+
+            </fieldset>
+
+            <!-- BOTÕES -->
+            <div class="botoes">
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+                <button type="reset">
+                    Limpar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
